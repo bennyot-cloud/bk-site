@@ -4,51 +4,64 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BK אחזקות – כל פתרונות הבית במקום אחד</title>
-  <meta name="description" content="BK אחזקות – הנדימן, שיפוצים קלים ותחזוקה לבית ולעסק. אחריות מלאה, הגעה מהירה, מחירים הוגנים.">
-  <!-- Tailwind CSS via CDN -->
+  <meta name="description" content="BK אחזקות – הנדימן מקצועי עם יחס אישי. חשמל קל, אינסטלציה, צבע, הרכבות ותיקונים. זמינות במרכז, אחריות מלאה.">
+  <!-- Google Font: Assistant -->
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#1E3A8A',   /* כחול אמינות */
+            accent: '#F97316',  /* כתום חמים */
+            bg: '#FAF7F2'       /* בז׳ עדין לרקע */
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    .chip{ @apply px-3 py-1 rounded-full bg-white border text-sm shadow-sm; }
-    .btn{ @apply rounded-2xl px-5 py-3 bg-gray-900 text-white; }
-    .btn-outline{ @apply rounded-2xl px-5 py-3 border; }
-    .card{ @apply rounded-2xl border bg-white shadow-sm; }
+    body { font-family: "Assistant", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-bg text-gray-900">
+
   <!-- Top Bar -->
-  <div class="w-full bg-white/90 backdrop-blur sticky top-0 z-50 border-b" dir="rtl">
+  <div class="w-full bg-brand text-white sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-2xl bg-gray-900 text-white grid place-items-center font-bold">BK</div>
+        <div class="w-10 h-10 rounded-2xl bg-white/15 grid place-items-center font-bold">BK</div>
         <div>
           <div class="text-xl font-bold">BK אחזקות</div>
-          <div class="text-sm text-gray-500">כל פתרונות הבית במקום אחד</div>
+          <div class="text-sm text-white/80">כל פתרונות הבית במקום אחד</div>
         </div>
       </div>
       <div class="flex items-center gap-2 text-sm">
-        <span>התקשרו עכשיו</span>
-        <a id="phoneLink" href="#" class="underline">050-0000000</a>
-        <a id="waLink" href="#" class="ml-2 btn">שלחו תמונה בווטסאפ</a>
+        <span class="hidden sm:inline">התקשרו עכשיו</span>
+        <a id="phoneLink" href="#" class="underline underline-offset-4">050-0000000</a>
+        <a id="waLink" href="#" class="ml-2 px-4 py-2 rounded-2xl bg-accent text-white hover:opacity-90 transition">שלחו תמונה בווטסאפ</a>
       </div>
     </div>
   </div>
 
   <!-- Hero -->
-  <header class="relative overflow-hidden" dir="rtl">
-    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581093458791-9d09f62b7c1b?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center opacity-20"></div>
-    <div class="relative max-w-6xl mx-auto px-4 py-16 lg:py-24">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white shadow text-sm mb-4 border">
-        BK אחזקות – כל פתרונות הבית במקום אחד
-      </div>
-      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-        הנדימן, שיפוצים קלים ותחזוקה לבית ולעסק
+  <header class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581093458791-9d09f62b7c1b?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-14 lg:py-20">
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border text-sm mb-3 shadow-sm">
+        BK אחזקות – אמינות, אחריות וזמינות
+      </span>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-brand">
+        שירותי הנדימן מקצועיים עם יחס אישי
       </h1>
       <p class="mt-4 text-lg text-gray-700 max-w-2xl">
-        מהרכבת רהיטים ותליית טלוויזיות ועד חשמל קל, צבע ואינסטלציה. זמינות במרכז, אחריות על כל עבודה, ומחירים הוגנים מראש.
+        מהרכבת רהיטים ותליית טלוויזיות ועד חשמל קל, צבע ואינסטלציה. זמינות בכל המרכז, אחריות על כל עבודה ומחירים הוגנים מראש.
       </p>
       <div class="mt-6 flex flex-wrap gap-3">
-        <a href="#contact" class="btn">קבלו הצעת מחיר מהירה</a>
-        <a href="#services" class="btn-outline">לראות שירותים →</a>
+        <a href="#contact" class="px-5 py-3 rounded-2xl bg-accent text-white text-base hover:opacity-90 transition">קבלו הצעת מחיר מהירה</a>
+        <a href="#services" class="px-5 py-3 rounded-2xl border border-brand/40 text-brand hover:bg-white transition">לראות שירותים</a>
       </div>
       <div class="mt-6 flex flex-wrap gap-6 text-sm text-gray-700">
         <span>הגעה מהירה</span>
@@ -59,252 +72,143 @@
   </header>
 
   <!-- Why Us -->
-  <section class="max-w-6xl mx-auto px-4 py-14" dir="rtl">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4">למה הקמנו את BK אחזקות</h2>
-    <p class="text-gray-700 max-w-4xl">
-      BK אחזקות נולדה מהשטח: בני וכפיר ראו כמה קשה למצוא בעלי מקצוע אמינים, שמגיעים בזמן, מסבירים מראש את העלויות ומשאירים בית נקי.
-      לכן הקמנו שירות הנדימן איכותי שמעניק שקט נפשי – עם תקשורת ברורה, מחירים הוגנים ואחריות מלאה על כל עבודה. המטרה שלנו פשוטה:
-      לפתור לכם את הבעיות בבית, מהר ובדיוק כמו שצריך.
+  <section class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-3xl md:text-4xl font-bold mb-3 text-brand">למה הקמנו את BK אחזקות</h2>
+    <p class="text-gray-700 max-w-4xl leading-7">
+      BK אחזקות נולדה מהשטח: בני וכפיר ראו כמה קשה למצוא בעלי מקצוע אמינים שמגיעים בזמן, מסבירים מראש את העלויות ומשאירים בית נקי.
+      לכן הקמנו שירות הנדימן שנותן שקט נפשי – תקשורת ברורה, מחירים הוגנים ואחריות מלאה על כל עבודה. המטרה פשוטה:
+      לפתור לכם בעיות בבית, מהר ובדיוק כמו שצריך.
     </p>
   </section>
 
   <!-- Services -->
-  <section id="services" class="max-w-6xl mx-auto px-4 py-16" dir="rtl">
+  <section id="services" class="max-w-6xl mx-auto px-4 py-12">
     <h2 class="text-3xl md:text-4xl font-bold mb-8">שירותים מובילים</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="card">
-        <div class="p-4 border-b text-xl font-semibold">עבודות כלליות</div>
+      <!-- Card -->
+      <div class="rounded-2xl bg-white border shadow-sm">
+        <div class="p-4 border-b text-xl font-semibold text-brand">עבודות כלליות</div>
         <ul class="p-4 list-disc pr-5 text-gray-700 space-y-1">
-          <li>הרכבת רהיטים</li>
-          <li>תליית טלוויזיות, מדפים ומראות</li>
-          <li>ידיות וצירים</li>
-          <li>מתלים ווילונות</li>
+          <li>הרכבת רהיטים</li><li>תליית טלוויזיות, מדפים ומראות</li><li>ידיות וצירים</li><li>מתלים ווילונות</li>
         </ul>
       </div>
-      <div class="card">
-        <div class="p-4 border-b text-xl font-semibold">חשמל ותאורה</div>
+      <div class="rounded-2xl bg-white border shadow-sm">
+        <div class="p-4 border-b text-xl font-semibold text-brand">חשמל ותאורה</div>
         <ul class="p-4 list-disc pr-5 text-gray-700 space-y-1">
-          <li>התקנת גופי תאורה ומאווררי תקרה</li>
-          <li>מפסקים ושקעים</li>
-          <li>איתור תקלות בסיסיות</li>
-          <li>הרחבת נקודות (עם חשמלאי מוסמך לפי צורך)</li>
+          <li>התקנת גופי תאורה ומאווררי תקרה</li><li>מפסקים ושקעים</li><li>איתור תקלות בסיסיות</li><li>הרחבת נקודות (עם חשמלאי מוסמך לפי צורך)</li>
         </ul>
       </div>
-      <div class="card">
-        <div class="p-4 border-b text-xl font-semibold">אינסטלציה קלה</div>
+      <div class="rounded-2xl bg-white border shadow-sm">
+        <div class="p-4 border-b text-xl font-semibold text-brand">אינסטלציה קלה</div>
         <ul class="p-4 list-disc pr-5 text-gray-700 space-y-1">
-          <li>החלפת ברזים וניאגרות</li>
-          <li>פתיחת סתימות פשוטות</li>
-          <li>תיקוני נזילות</li>
-          <li>התקנת מסנני מים</li>
+          <li>החלפת ברזים וניאגרות</li><li>פתיחת סתימות פשוטות</li><li>תיקוני נזילות</li><li>התקנת מסנני מים</li>
         </ul>
       </div>
-      <div class="card">
-        <div class="p-4 border-b text-xl font-semibold">צבע ושפכטל</div>
+      <div class="rounded-2xl bg-white border shadow-sm">
+        <div class="p-4 border-b text-xl font-semibold text-brand">צבע ושפכטל</div>
         <ul class="p-4 list-disc pr-5 text-gray-700 space-y-1">
-          <li>צביעת חדרים ומשרדים</li>
-          <li>תיקוני קירות, שפכטל וטיח</li>
-          <li>צביעת דלתות ומשקופים</li>
-          <li>התקנת טפטים</li>
+          <li>צביעת חדרים ומשרדים</li><li>תיקוני קירות, שפכטל וטיח</li><li>צביעת דלתות ומשקופים</li><li>התקנת טפטים</li>
         </ul>
       </div>
-      <div class="card">
-        <div class="p-4 border-b text-xl font-semibold">תחזוקה וביטחון</div>
+      <div class="rounded-2xl bg-white border shadow-sm">
+        <div class="p-4 border-b text-xl font-semibold text-brand">תחזוקה וביטחון</div>
         <ul class="p-4 list-disc pr-5 text-gray-700 space-y-1">
-          <li>מנעולים וצילינדרים</li>
-          <li>תיקון תריסים</li>
-          <li>איטום חלונות ודלתות</li>
-          <li>רשתות לחלונות</li>
+          <li>מנעולים וצילינדרים</li><li>תיקון תריסים</li><li>איטום חלונות ודלתות</li><li>רשתות לחלונות</li>
         </ul>
       </div>
-      <div class="card">
-        <div class="p-4 border-b text-xl font-semibold">חוץ וגינה</div>
+      <div class="rounded-2xl bg-white border shadow-sm">
+        <div class="p-4 border-b text-xl font-semibold text-brand">חוץ וגינה</div>
         <ul class="p-4 list-disc pr-5 text-gray-700 space-y-1">
-          <li>הרכבת מחסנים (Keter)</li>
-          <li>תיקוני גדרות ושערים</li>
-          <li>ניקוי מרזבים</li>
-          <li>דק ופרגולה מוכנה</li>
+          <li>הרכבת מחסנים (Keter)</li><li>תיקוני גדרות ושערים</li><li>ניקוי מרזבים</li><li>דק ופרגולה מוכנה</li>
         </ul>
       </div>
     </div>
   </section>
 
   <!-- Pricing -->
-  <section class="bg-white py-14 border-y" dir="rtl">
+  <section class="bg-white py-12 border-y">
     <div class="max-w-6xl mx-auto px-4">
       <h3 class="text-2xl md:text-3xl font-bold mb-8">מחירים לדוגמה</h3>
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="card">
+        <!-- Price Card -->
+        <div class="rounded-2xl bg-white border shadow-sm">
           <div class="p-4 border-b flex items-center justify-between">
             <span class="font-semibold">ביקור טכנאי</span>
-            <span class="text-xl font-extrabold">מ-249₪</span>
+            <span class="text-xl font-extrabold text-brand">מ-249₪</span>
           </div>
           <ul class="p-4 space-y-2 text-gray-700">
-            <li>כולל בדיקה וייעוץ</li>
-            <li>קיזוז מעלות העבודה</li>
-            <li>הגעה מהירה</li>
+            <li>כולל בדיקה וייעוץ</li><li>קיזוז מעלות העבודה</li><li>הגעה מהירה</li>
           </ul>
-          <a href="#contact" class="mx-4 mb-4 btn block text-center">אני רוצה הצעה</a>
+          <a href="#contact" class="mx-4 mb-4 block text-center px-4 py-2 rounded-2xl bg-accent text-white hover:opacity-90 transition">אני רוצה הצעה</a>
         </div>
-        <div class="card">
+        <div class="rounded-2xl bg-white border shadow-sm">
           <div class="p-4 border-b flex items-center justify-between">
             <span class="font-semibold">תליית טלוויזיה</span>
-            <span class="text-xl font-extrabold">מ-299₪</span>
+            <span class="text-xl font-extrabold text-brand">מ-299₪</span>
           </div>
           <ul class="p-4 space-y-2 text-gray-700">
-            <li>יישור מדויק</li>
-            <li>הסתרת כבלים בסיסית</li>
-            <li>אחריות מלאה</li>
+            <li>יישור מדויק</li><li>הסתרת כבלים בסיסית</li><li>אחריות מלאה</li>
           </ul>
-          <a href="#contact" class="mx-4 mb-4 btn block text-center">אני רוצה הצעה</a>
+          <a href="#contact" class="mx-4 mb-4 block text-center px-4 py-2 rounded-2xl bg-accent text-white hover:opacity-90 transition">אני רוצה הצעה</a>
         </div>
-        <div class="card">
+        <div class="rounded-2xl bg-white border shadow-sm">
           <div class="p-4 border-b flex items-center justify-between">
             <span class="font-semibold">צביעת חדר</span>
-            <span class="text-xl font-extrabold">מ-950₪</span>
+            <span class="text-xl font-extrabold text-brand">מ-950₪</span>
           </div>
           <ul class="p-4 space-y-2 text-gray-700">
-            <li>צביעה נקייה</li>
-            <li>תיקוני שפכטל קלים</li>
-            <li>חומרי גלם כלולים</li>
+            <li>צביעה נקייה</li><li>תיקוני שפכטל קלים</li><li>חומרי גלם כלולים</li>
           </ul>
-          <a href="#contact" class="mx-4 mb-4 btn block text-center">אני רוצה הצעה</a>
+          <a href="#contact" class="mx-4 mb-4 block text-center px-4 py-2 rounded-2xl bg-accent text-white hover:opacity-90 transition">אני רוצה הצעה</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Before & After -->
-  <section class="max-w-6xl mx-auto px-4 py-16" dir="rtl">
+  <!-- Before & After (נשאיר דמו עד שיהיו תמונות אמיתיות) -->
+  <section class="max-w-6xl mx-auto px-4 py-12">
     <h3 class="text-2xl md:text-3xl font-bold mb-6">לפני ואחרי</h3>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="card overflow-hidden">
+      <div class="rounded-2xl overflow-hidden bg-white border shadow-sm">
         <div class="grid grid-cols-2">
           <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2a59?w=1600&auto=format&fit=crop&q=80" class="w-full h-48 object-cover" alt="before">
           <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1600&auto=format&fit=crop&q=80" class="w-full h-48 object-cover" alt="after">
         </div>
         <div class="p-4 border-t">
           <div class="text-sm text-gray-600">תליית טלוויזיה + הסתרת כבלים</div>
-          <div class="text-xs text-gray-500">* תמונות הדגמה. נחליף בשלכם כשיהיו.</div>
+          <div class="text-xs text-gray-500">* דוגמאות זמניות. נחליף לשלכם כשיהיו.</div>
         </div>
       </div>
-      <div class="card overflow-hidden">
+      <div class="rounded-2xl overflow-hidden bg-white border shadow-sm">
         <div class="grid grid-cols-2">
           <img src="https://images.unsplash.com/photo-1582582621958-3a3b4a8b0f24?w=1600&auto=format&fit=crop&q=80" class="w-full h-48 object-cover" alt="before">
           <img src="https://images.unsplash.com/photo-1582582622084-079a3a644610?w=1600&auto=format&fit=crop&q=80" class="w-full h-48 object-cover" alt="after">
         </div>
         <div class="p-4 border-t">
           <div class="text-sm text-gray-600">צביעת חדר ותיקוני שפכטל</div>
-          <div class="text-xs text-gray-500">* תמונות הדגמה. נחליף בשלכם כשיהיו.</div>
+          <div class="text-xs text-gray-500">* דוגמאות זמניות. נחליף לשלכם כשיהיו.</div>
         </div>
       </div>
-      <div class="card overflow-hidden">
+      <div class="rounded-2xl overflow-hidden bg-white border shadow-sm">
         <div class="grid grid-cols-2">
           <img src="https://images.unsplash.com/photo-1560185007-b03591f8d7d1?w=1600&auto=format&fit=crop&q=80" class="w-full h-48 object-cover" alt="before">
           <img src="https://images.unsplash.com/photo-1560184897-43a8db3bf65e?w=1600&auto=format&fit=crop&q=80" class="w-full h-48 object-cover" alt="after">
         </div>
         <div class="p-4 border-t">
           <div class="text-sm text-gray-600">החלפת ברז וכיור</div>
-          <div class="text-xs text-gray-500">* תמונות הדגמה. נחליף בשלכם כשיהיו.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service Area -->
-  <section class="bg-gray-100 py-14" dir="rtl">
-    <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-2xl md:text-3xl font-bold mb-4">אזורי שירות</h3>
-      <p class="text-gray-700 mb-6">זמינות במרכז. ניתן לתאם הגעה לאזורים נוספים בתיאום מראש.</p>
-      <div class="flex flex-wrap gap-2">
-        <span class="chip">תל אביב</span>
-        <span class="chip">גבעתיים</span>
-        <span class="chip">רמת גן</span>
-        <span class="chip">חולון</span>
-        <span class="chip">בת ים</span>
-        <span class="chip">פתח תקווה</span>
-        <span class="chip">הרצליה</span>
-        <span class="chip">רמת השרון</span>
-        <span class="chip">גבעת שמואל</span>
-        <span class="chip">בני ברק</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process + Reviews -->
-  <section class="max-w-6xl mx-auto px-4 py-16" dir="rtl">
-    <div class="grid lg:grid-cols-2 gap-10 items-start">
-      <div>
-        <h3 class="text-2xl md:text-3xl font-bold mb-6">איך זה עובד</h3>
-        <div class="space-y-4">
-          <div class="flex gap-4 items-start">
-            <div class="w-10 h-10 rounded-full bg-gray-900 text-white grid place-items-center font-bold">1</div>
-            <div>
-              <div class="font-semibold">שולחים תמונה או מסבירים</div>
-              <div class="text-sm text-gray-700">אפשר בוואטסאפ או בטופס</div>
-            </div>
-          </div>
-          <div class="flex gap-4 items-start">
-            <div class="w-10 h-10 rounded-full bg-gray-900 text-white grid place-items-center font-bold">2</div>
-            <div>
-              <div class="font-semibold">מקבלים הצעת מחיר ברורה</div>
-              <div class="text-sm text-gray-700">כולל זמן הגעה ועלות</div>
-            </div>
-          </div>
-          <div class="flex gap-4 items-start">
-            <div class="w-10 h-10 rounded-full bg-gray-900 text-white grid place-items-center font-bold">3</div>
-            <div>
-              <div class="font-semibold">מגיעים ומבצעים</div>
-              <div class="text-sm text-gray-700">עבודה נקייה ואחריות מלאה</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <h3 class="text-2xl md:text-3xl font-bold mb-6">לקוחות מספרים</h3>
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div class="card p-4">
-            <div class="text-yellow-500">★★★★★</div>
-            <div class="text-sm text-gray-700">ביקשתי תליית טלוויזיה והתקנת מדפים. הגיעו בזמן, עבדו נקי והשאירו הכל מסודר. מחיר הוגן מאוד.</div>
-            <div class="mt-3 text-sm font-semibold">לירון ל.</div>
-          </div>
-          <div class="card p-4">
-            <div class="text-yellow-500">★★★★★</div>
-            <div class="text-sm text-gray-700">פתרו לי תקלה בנזילה בכיור תוך חצי שעה. שירות מקצועי ותקשורת מצוינת מהרגע הראשון.</div>
-            <div class="mt-3 text-sm font-semibold">אלעד ג.</div>
-          </div>
-          <div class="card p-4">
-            <div class="text-yellow-500">★★★★★</div>
-            <div class="text-sm text-gray-700">צביעה של שני חדרים כולל תיקונים. קיבלתי תוצאה מושלמת ובלי בלגן. ממליצה בחום!</div>
-            <div class="mt-3 text-sm font-semibold">שירי מ.</div>
-          </div>
-          <div class="card p-4">
-            <div class="text-yellow-500">★★★★★</div>
-            <div class="text-sm text-gray-700">התקינו תאורה בכל הסלון והמטבח. נתנו ייעוץ מה מתאים. יצא יפה ובטיחותי.</div>
-            <div class="mt-3 text-sm font-semibold">דנה ק.</div>
-          </div>
-          <div class="card p-4">
-            <div class="text-yellow-500">★★★★★</div>
-            <div class="text-sm text-gray-700">שירות תחזוקה חודשי לבניין: תיקוני תריסים, צבע, חשמל קל. חוסך לנו זמן וכסף.</div>
-            <div class="mt-3 text-sm font-semibold">ועד בית – רח' הרצל</div>
-          </div>
-          <div class="card p-4">
-            <div class="text-yellow-500">★★★★★</div>
-            <div class="text-sm text-gray-700">שולח תמונה בוואטסאפ ומקבל הצעת מחיר תוך דקות. אמינים, גמישים, ושומרים על הדייר מרוצה.</div>
-            <div class="mt-3 text-sm font-semibold">משכיר דירות</div>
-          </div>
+          <div class="text-xs text-gray-500">* דוגמאות זמניות. נחליף לשלכם כשיהיו.</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="bg-white py-16 border-t" dir="rtl">
+  <section id="contact" class="bg-white py-12 border-t">
     <div class="max-w-6xl mx-auto px-4">
       <h3 class="text-2xl md:text-3xl font-bold mb-6">דברו איתנו</h3>
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="card">
-          <div class="p-4 border-b font-semibold">בקשת הצעת מחיר</div>
+        <div class="rounded-2xl bg-white border shadow-sm">
+          <div class="p-4 border-b font-semibold text-brand">בקשת הצעת מחיר</div>
           <div class="p-4">
             <form onsubmit="handleSubmit(event)" class="grid gap-3">
               <div>
@@ -323,18 +227,18 @@
                 <label class="text-sm">פרטים נוספים</label>
                 <textarea rows="4" class="mt-1 w-full border rounded-xl px-3 py-2" id="msg" placeholder="ספרו לנו מה צריך"></textarea>
               </div>
-              <button type="submit" class="btn">שליחה</button>
+              <button type="submit" class="px-4 py-2 rounded-2xl bg-accent text-white hover:opacity-90 transition">שליחה</button>
             </form>
           </div>
         </div>
-        <div class="rounded-2xl p-6 bg-gray-100 border">
+        <div class="rounded-2xl p-6 bg-bg border">
           <div class="text-lg font-semibold mb-2">פרטי קשר</div>
           <div class="space-y-2 text-gray-700">
             <div>050-0000000</div>
             <div>מרכז הארץ והסביבה</div>
           </div>
           <div class="mt-4">
-            <a id="waLink2" href="#" class="btn inline-block">שלחו תמונה בווטסאפ</a>
+            <a id="waLink2" href="#" class="px-4 py-2 rounded-2xl bg-accent text-white inline-block hover:opacity-90 transition">שלחו תמונה בווטסאפ</a>
           </div>
           <div class="mt-6 text-sm text-gray-600">
             אפשר לשלוח תמונות של העבודה כדי לקבל הצעת מחיר מהירה בלי התחייבות.
@@ -345,11 +249,11 @@
   </section>
 
   <!-- Footer -->
-  <footer class="border-t bg-white" dir="rtl">
+  <footer class="border-t bg-white">
     <div class="max-w-6xl mx-auto px-4 py-8 grid md:grid-cols-2 gap-6 items-center">
       <div>
-        <div class="text-xl font-bold">BK אחזקות</div>
-        <div class="text-sm text-gray-600">בני וכפיר. כל פתרונות הבית במקום אחד. אחריות ושירות אישי.</div>
+        <div class="text-xl font-bold text-brand">BK אחזקות</div>
+        <div class="text-sm text-gray-700">בני וכפיר. כל פתרונות הבית במקום אחד. אחריות ושירות אישי.</div>
       </div>
       <div class="text-sm text-gray-600 md:text-left">
         © <span id="year"></span> BK אחזקות. כל הזכויות שמורות.
@@ -359,15 +263,16 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
     function handleSubmit(e){
       e.preventDefault();
       const name = document.getElementById('name').value || '';
       const phone = document.getElementById('phone').value || 'לא הוזן';
       alert(`תודה רבה ${name}!\nקיבלנו את הפנייה ונחזור אליך בהקדם.\nטלפון שנרשם: ${phone}`);
     }
-    // When you have a real phone, change here to your number in international format without leading zero.
-    // Example for 050-1234567 -> 972501234567
-    const phoneIntl = '972500000000'; // TODO: update when ready
+
+    // כשהמספר יהיה מוכן: עדכן כאן! לדוגמה 050-1234567 -> 972501234567
+    const phoneIntl = '972500000000';
     const wa = `https://wa.me/${phoneIntl}`;
     document.getElementById('waLink').href = wa;
     document.getElementById('waLink2').href = wa;
