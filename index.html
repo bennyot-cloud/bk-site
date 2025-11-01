@@ -5,24 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>B&K אחזקות – כל פתרונות הבית במקום אחד</title>
   <meta name="description" content="B&K אחזקות – צוות מקצועי לעבודות חשמל, אינסטלציה, צבע ותחזוקה. אמינות, אחריות וזמינות מלאה.">
+  <!-- Font + Tailwind -->
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            brand: '#1E3A8A',
-            accent: '#F97316',
-            bg: '#FAF7F2'
-          }
+          colors: { brand:'#1E3A8A', accent:'#F97316', bg:'#FAF7F2' }
         }
       }
     }
   </script>
-  <style>
-    body { font-family: "Assistant", sans-serif; }
-  </style>
+
+  <!-- Favicon (עדכן נתיב אם צריך) -->
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/bennyot-cloud/bk-site/main/favicon.png" />
+
+  <style> body{font-family:"Assistant",sans-serif;} </style>
 </head>
 <body class="bg-bg text-gray-900">
 
@@ -30,7 +29,8 @@
   <div class="w-full bg-brand text-white sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-2xl bg-white/15 grid place-items-center font-bold">B&K</div>
+        <!-- לוגו (עדכן נתיב אם צריך) -->
+        <img src="https://raw.githubusercontent.com/bennyot-cloud/bk-site/main/logo.png" alt="B&K אחזקות" class="h-12">
         <div>
           <div class="text-xl font-bold">B&K אחזקות</div>
           <div class="text-sm text-white/80">כל פתרונות הבית במקום אחד</div>
@@ -51,9 +51,7 @@
       <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border text-sm mb-3 shadow-sm">
         B&K אחזקות – אמינות, אחריות וזמינות
       </span>
-      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-brand">
-        שירותי הנדימן מקצועיים לבית ולעסק
-      </h1>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-brand">שירותי הנדימן מקצועיים לבית ולעסק</h1>
       <p class="mt-4 text-lg text-gray-700 max-w-2xl">
         התקנות, צבע, אינסטלציה, חשמל קל ותחזוקה שוטפת – הצוות שלנו כאן כדי לטפל בכל מה שצריך באיכות ובאמינות.
       </p>
@@ -62,9 +60,7 @@
         <a href="#services" class="px-5 py-3 rounded-2xl border border-brand/40 text-brand hover:bg-white transition">לראות שירותים</a>
       </div>
       <div class="mt-6 flex flex-wrap gap-6 text-sm text-gray-700">
-        <span>הגעה מהירה</span>
-        <span>אחריות מלאה</span>
-        <span>שירות מקצועי ואישי</span>
+        <span>הגעה מהירה</span><span>אחריות מלאה</span><span>שירות מקצועי ואישי</span>
       </div>
     </div>
   </header>
@@ -152,7 +148,20 @@
     </div>
   </section>
 
-  <!-- WhatsApp Floating Button -->
+  <!-- Footer -->
+  <footer class="border-t bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-8 grid md:grid-cols-2 gap-6 items-center">
+      <div>
+        <div class="text-xl font-bold text-brand">B&K אחזקות</div>
+        <div class="text-sm text-gray-700">כל פתרונות הבית במקום אחד. צוות מקצועי, שירות אישי ואחריות מלאה.</div>
+      </div>
+      <div class="text-sm text-gray-600 md:text-left">
+        © <span id="year"></span> B&K אחזקות. כל הזכויות שמורות.
+      </div>
+    </div>
+  </footer>
+
+  <!-- כפתור וואטסאפ צף -->
   <a href="https://wa.me/972500000000?text=שלום!%20אשמח%20לקבל%20פרטים%20על%20שירותי%20B%26K%20אחזקות"
      class="fixed bottom-5 left-5 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50"
      target="_blank" aria-label="WhatsApp">
@@ -162,6 +171,9 @@
   </a>
 
   <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // טופס -> וואטסאפ
     function handleSubmit(e){
       e.preventDefault();
       const name = document.getElementById('name').value || '';
@@ -169,17 +181,17 @@
       const service = document.getElementById('service').value || '';
       const msg = document.getElementById('msg').value || '';
       const text = `👋 שלום, אני ${name}%0Aטלפון: ${phone}%0Aשירות מבוקש: ${service}%0Aפרטים נוספים: ${msg}`;
-      const phoneIntl = '972500000000'; // החלף למספר שלך
+      const phoneIntl = '972500000000'; // עדכן למספר שלך (למשל 972501234567)
       const wa = `https://wa.me/${phoneIntl}?text=${text}`;
       window.open(wa, '_blank');
     }
 
-    const phoneIntl = '972500000000';
+    // קישורי וואטסאפ ישירים
+    const phoneIntl = '972500000000'; // עדכן למספר שלך
     const wa = `https://wa.me/${phoneIntl}`;
     document.getElementById('waLink').href = wa;
     document.getElementById('waLink2').href = wa;
-    document.getElementById('phoneLink').href = 'tel:+972500000000';
+    document.getElementById('phoneLink').href = 'tel:+972500000000'; // עדכן גם כאן
   </script>
-
 </body>
 </html>
