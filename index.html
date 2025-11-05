@@ -7,16 +7,11 @@
   <meta name="description" content="B&K אחזקות – הנדימן ושירותי תחזוקה לבית ולעסק: חשמל, אינסטלציה, צבע, התקנות ותחזוקה. שירות אמין, הגעה מהירה ואחריות.">
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- Font + Tailwind -->
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          colors: { brand:'#1E3A8A', accent:'#F97316', bg:'#FAF7F2' }
-        }
-      }
+      theme: { extend: { colors: { brand:'#1E3A8A', accent:'#F97316', bg:'#FAF7F2' } } }
     }
   </script>
   <style> body{font-family:"Assistant",sans-serif;} </style>
@@ -33,10 +28,10 @@
           <div class="text-sm text-gray-600">כל פתרונות הבית במקום אחד</div>
         </div>
       </div>
-      <div class="flex items-center gap-2 text-sm">
-        <span class="hidden sm:inline text-gray-600">התקשרו עכשיו</span>
-        <a id="phoneLink" href="tel:+972500000000" class="underline underline-offset-4">050-0000000</a>
-        <a id="waTop" href="https://wa.me/972500000000" class="ml-2 px-3 py-2 rounded-2xl bg-accent text-white hover:opacity-90 transition">וואטסאפ</a>
+      <div class="flex items-center gap-3 text-sm">
+        <a id="phoneLinkTop" href="#" class="underline underline-offset-4">050-4378400</a>
+        <a id="emailTop" href="#" class="underline underline-offset-4 hidden sm:inline">bk.holdings.hand@gmail.com</a>
+        <a id="waTop" href="#" class="px-3 py-2 rounded-2xl bg-accent text-white hover:opacity-90 transition">וואטסאפ</a>
       </div>
     </div>
   </div>
@@ -74,7 +69,6 @@
           <li>✔ עמידה בלוחות זמנים</li>
         </ul>
       </div>
-      <!-- car image small & subtle -->
       <div class="flex justify-center md:justify-end">
         <img src="car.png" alt="רכב שירות B&K אחזקות" class="w-56 rounded-xl shadow-md border border-gray-200">
       </div>
@@ -86,7 +80,7 @@
     <h3 class="text-2xl md:text-3xl font-bold mb-6 text-brand">שירותים</h3>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- 1. עבודות כלליות -->
+      <!-- 1 -->
       <div class="rounded-2xl bg-white border shadow-sm">
         <div class="p-4 border-b text-xl font-semibold text-brand">🛠️ עבודות כלליות</div>
         <ul class="p-4 list-disc pr-5 text-gray-700 space-y-1">
@@ -96,8 +90,7 @@
           <li>התקנת מתלים, מתקני תלייה, וילונות</li>
         </ul>
       </div>
-
-      <!-- 2. חשמל ותאורה -->
+      <!-- 2 -->
       <div class="rounded-2xl bg-white border shadow-sm">
         <div class="p-4 border-b text-xl font-semibold text-brand">💡 חשמל ותאורה</div>
         <ul class="p-4 list-disc pr-5 text-gray-700 space-y-1">
@@ -107,8 +100,7 @@
           <li>התקנת נקודות חשמל נוספות (עם חשמלאי מוסמך לפי הצורך)</li>
         </ul>
       </div>
-
-      <!-- 3. אינסטלציה קלה -->
+      <!-- 3 -->
       <div class="rounded-2xl bg-white border shadow-sm">
         <div class="p-4 border-b text-xl font-semibold text-brand">🚰 אינסטלציה קלה</div>
         <ul class="p-4 list-disc pr-5 text-gray-700 space-y-1">
@@ -118,8 +110,7 @@
           <li>התקנת מסנני מים</li>
         </ul>
       </div>
-
-      <!-- 4. צבע ושיפוצים קלים -->
+      <!-- 4 -->
       <div class="rounded-2xl bg-white border shadow-sm">
         <div class="p-4 border-b text-xl font-semibold text-brand">🎨 צבע ושיפוצים קלים</div>
         <ul class="p-4 list-disc pr-5 text-gray-700 space-y-1">
@@ -129,8 +120,7 @@
           <li>צביעת דלתים, משקופים וחלונות</li>
         </ul>
       </div>
-
-      <!-- 5. תחזוקה וביטחון -->
+      <!-- 5 -->
       <div class="rounded-2xl bg-white border shadow-sm">
         <div class="p-4 border-b text-xl font-semibold text-brand">🔒 תחזוקה וביטחון</div>
         <ul class="p-4 list-disc pr-5 text-gray-700 space-y-1">
@@ -140,8 +130,7 @@
           <li>תחזוקת גינות קטנות</li>
         </ul>
       </div>
-
-      <!-- 6. חוץ וגינה -->
+      <!-- 6 -->
       <div class="rounded-2xl bg-white border shadow-sm">
         <div class="p-4 border-b text-xl font-semibold text-brand">🏡 חוץ וגינה</div>
         <ul class="p-4 list-disc pr-5 text-gray-700 space-y-1">
@@ -151,8 +140,7 @@
           <li>ניקוי מרזבים וגגות</li>
         </ul>
       </div>
-
-      <!-- 7. שירותים עסקיים -->
+      <!-- 7 -->
       <div class="rounded-2xl bg-white border shadow-sm">
         <div class="p-4 border-b text-xl font-semibold text-brand">🧰 שירותים עסקיים</div>
         <ul class="p-4 list-disc pr-5 text-gray-700 space-y-1">
@@ -165,35 +153,17 @@
     </div>
   </section>
 
-  <!-- Testimonials (6 cards, emphasized) -->
+  <!-- Testimonials (6) -->
   <section id="testimonials" class="bg-bg py-12">
     <div class="max-w-6xl mx-auto px-4">
       <h3 class="text-2xl md:text-3xl font-bold mb-6 text-brand">מה הלקוחות מספרים עלינו</h3>
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl bg-white border shadow-sm p-6">
-          <div class="text-gray-700">“הגיעו בזמן ועבדו נקי ומסודר. מחיר הוגן ואחריות. מומלץ בחום!”</div>
-          <div class="mt-3 font-semibold text-brand">– עדי מ., תל אביב</div>
-        </div>
-        <div class="rounded-2xl bg-white border shadow-sm p-6">
-          <div class="text-gray-700">“מקצוענים. פתרו תקלה חשמלית תוך שעה. שירות מעולה.”</div>
-          <div class="mt-3 font-semibold text-brand">– ליאת ו., פתח תקווה</div>
-        </div>
-        <div class="rounded-2xl bg-white border shadow-sm p-6">
-          <div class="text-gray-700">“תליית טלוויזיה ומדפים בדיוק ובקפדנות. אחלה צוות.”</div>
-          <div class="mt-3 font-semibold text-brand">– רון ש., ראשון לציון</div>
-        </div>
-        <div class="rounded-2xl bg-white border shadow-sm p-6">
-          <div class="text-gray-700">“אחרי שני בעלי מקצוע – רק הם פתרו את הנזילה. תודה!”</div>
-          <div class="mt-3 font-semibold text-brand">– מורן ק., גבעתיים</div>
-        </div>
-        <div class="rounded-2xl bg-white border shadow-sm p-6">
-          <div class="text-gray-700">“מענה מהיר, תיאום נוח והכל לפי הזמן שנקבע. חוויית שירות.”</div>
-          <div class="mt-3 font-semibold text-brand">– גיל ש., רמת גן</div>
-        </div>
-        <div class="rounded-2xl bg-white border shadow-sm p-6">
-          <div class="text-gray-700">“צביעה ותיקונים קלים בדירה להשכרה – בוצע מושלם ובזמן.”</div>
-          <div class="mt-3 font-semibold text-brand">– רועי פ., חולון</div>
-        </div>
+        <div class="rounded-2xl bg-white border shadow-sm p-6"><div class="text-gray-700">“הגיעו בזמן ועבדו נקי ומסודר. מחיר הוגן ואחריות. מומלץ בחום!”</div><div class="mt-3 font-semibold text-brand">– עדי מ., תל אביב</div></div>
+        <div class="rounded-2xl bg-white border shadow-sm p-6"><div class="text-gray-700">“מקצוענים. פתרו תקלה חשמלית תוך שעה. שירות מעולה.”</div><div class="mt-3 font-semibold text-brand">– ליאת ו., פתח תקווה</div></div>
+        <div class="rounded-2xl bg-white border shadow-sm p-6"><div class="text-gray-700">“תליית טלוויזיה ומדפים בדיוק ובקפדנות. אחלה צוות.”</div><div class="mt-3 font-semibold text-brand">– רון ש., ראשון לציון</div></div>
+        <div class="rounded-2xl bg-white border shadow-sm p-6"><div class="text-gray-700">“אחרי שני בעלי מקצוע – רק הם פתרו את הנזילה. תודה!”</div><div class="mt-3 font-semibold text-brand">– מורן ק., גבעתיים</div></div>
+        <div class="rounded-2xl bg-white border shadow-sm p-6"><div class="text-gray-700">“מענה מהיר, תיאום נוח והכל לפי הזמן שנקבע. חוויית שירות.”</div><div class="mt-3 font-semibold text-brand">– גיל ש., רמת גן</div></div>
+        <div class="rounded-2xl bg-white border shadow-sm p-6"><div class="text-gray-700">“צביעה ותיקונים קלים בדירה להשכרה – בוצע מושלם ובזמן.”</div><div class="mt-3 font-semibold text-brand">– רועי פ., חולון</div></div>
       </div>
     </div>
   </section>
@@ -204,21 +174,25 @@
       <h3 class="text-2xl md:text-3xl font-bold mb-6">דברו איתנו</h3>
       <div class="grid md:grid-cols-2 gap-8">
         <div class="rounded-2xl bg-white border shadow-sm p-6">
-          <form onsubmit="handleSubmit(event)" class="grid gap-3">
-            <input type="text" id="name" placeholder="שם מלא" class="border rounded-xl px-3 py-2">
-            <input type="tel" id="phone" placeholder="טלפון" class="border rounded-xl px-3 py-2">
-            <input type="text" id="service" placeholder="סוג שירות" class="border rounded-xl px-3 py-2">
+          <form onsubmit="submitWhatsApp(event)" class="grid gap-3">
+            <input type="text" id="name" placeholder="שם מלא" class="border rounded-xl px-3 py-2" required>
+            <input type="tel" id="phone" placeholder="טלפון" class="border rounded-xl px-3 py-2" required>
+            <input type="text" id="service" placeholder="סוג שירות" class="border rounded-xl px-3 py-2" required>
             <textarea id="msg" rows="4" placeholder="פרטים נוספים" class="border rounded-xl px-3 py-2"></textarea>
-            <button type="submit" class="px-4 py-2 rounded-2xl bg-accent text-white hover:opacity-90 transition">שליחה</button>
+            <div class="flex flex-wrap gap-3">
+              <button type="submit" class="px-4 py-2 rounded-2xl bg-accent text-white hover:opacity-90 transition">שליחה בוואטסאפ</button>
+              <button type="button" onclick="submitEmail()" class="px-4 py-2 rounded-2xl border border-brand/40 text-brand hover:bg-white transition">שליחה במייל</button>
+            </div>
           </form>
         </div>
         <div>
           <p class="text-gray-700 mb-3">
-            📞 <a id="phoneText" href="tel:+972500000000" class="underline">050-0000000</a><br>
+            📞 <a id="phoneText" href="#" class="underline">050-4378400</a><br>
+            ✉️ <a id="emailBlock" href="#" class="underline">bk.holdings.hand@gmail.com</a><br>
             אזור הפעילות: מרכז והסביבה<br>
-            שעות: א׳–ה׳ 08:00–19:00
+            שעות: א׳–ו׳ 08:00–19:00
           </p>
-          <a id="waBlock" href="https://wa.me/972500000000" class="px-4 py-2 rounded-2xl bg-green-500 text-white hover:bg-green-600 transition inline-block">שלחו הודעה בוואטסאפ</a>
+          <a id="waBlock" href="#" class="px-4 py-2 rounded-2xl bg-green-500 text-white hover:bg-green-600 transition inline-block">שלחו הודעה בוואטסאפ</a>
         </div>
       </div>
     </div>
@@ -238,37 +212,72 @@
   </footer>
 
   <!-- WhatsApp floating -->
-  <a id="waFloat" href="https://wa.me/972500000000"
-     class="fixed bottom-5 left-5 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50"
-     target="_blank" aria-label="WhatsApp">
+  <a id="waFloat" href="#" class="fixed bottom-5 left-5 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50" target="_blank" aria-label="WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
       <path d="M12 .02C5.384.02 0 5.403 0 12.02c0 2.115.55 4.168 1.595 5.987L.043 24l6.195-1.62A11.99 11.99 0 0 0 12 24c6.616 0 12-5.383 12-12S18.616.02 12 .02z"/>
     </svg>
   </a>
 
   <script>
-    // שנה למספר האמיתי (בפורמט בינלאומי בלי 0)
-    const phoneIntl = '972500000000'; // לדוגמה: 97252XXXXXXX
-    const phoneHuman = '050-0000000';
+    // ====== הגדרות קשר ======
+    const phoneIntl = '972504378400';              // פורמט בינ"ל בלי אפס
+    const phoneHuman = '050-4378400';
+    const email = 'bk.holdings.hand@gmail.com';
 
-    // עדכון קישורי טלפון/וואטסאפ
+    // ====== עדכון קישורי ניווט ======
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('waTop').href   = `https://wa.me/${phoneIntl}`;
-    document.getElementById('waBlock').href = `https://wa.me/${phoneIntl}`;
-    document.getElementById('waFloat').href = `https://wa.me/${phoneIntl}`;
-    document.getElementById('phoneLink').href = `tel:+${phoneIntl}`;
-    document.getElementById('phoneText').href = `tel:+${phoneIntl}`;
-    document.getElementById('phoneText').textContent = phoneHuman;
 
-    // שליחת טופס לוואטסאפ
-    function handleSubmit(e){
+    const telHref = `tel:+${phoneIntl}`;
+    const waHref  = `https://wa.me/${phoneIntl}`;
+    const mailHref = `mailto:${email}`;
+
+    // Top
+    document.getElementById('phoneLinkTop').href = telHref;
+    document.getElementById('waTop').href = waHref;
+    document.getElementById('emailTop').href = mailHref;
+
+    // Contact block
+    document.getElementById('phoneText').href = telHref;
+    document.getElementById('emailBlock').href = mailHref;
+    document.getElementById('waBlock').href = waHref;
+
+    // Floating
+    document.getElementById('waFloat').href = waHref;
+
+    // ====== שליחת טופס לוואטסאפ ======
+    function submitWhatsApp(e){
       e.preventDefault();
-      const name=document.getElementById('name').value||'';
-      const phone=document.getElementById('phone').value||'';
-      const service=document.getElementById('service').value||'';
-      const msg=document.getElementById('msg').value||'';
-      const text=`👋 שלום, אני ${name}%0Aטלפון: ${phone}%0Aשירות: ${service}%0Aפרטים: ${msg}`;
-      window.open(`https://wa.me/${phoneIntl}?text=${text}`,'_blank');
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const service = document.getElementById('service').value.trim();
+      const msg = document.getElementById('msg').value.trim();
+
+      const text =
+        `👋 שלום, שמי ${name}%0A` +
+        `טלפון: ${phone}%0A` +
+        `שירות מבוקש: ${service}%0A` +
+        (msg ? `פרטים: ${encodeURIComponent(msg)}%0A` : '') +
+        `%0Aנשלח מדף האתר של B&K אחזקות`;
+
+      window.open(`${waHref}?text=${text}`, '_blank');
+    }
+
+    // ====== שליחה במייל (mailto) ======
+    function submitEmail(){
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const service = document.getElementById('service').value.trim();
+      const msg = document.getElementById('msg').value.trim();
+
+      const subject = encodeURIComponent('פניית לקוח מהאתר – B&K אחזקות');
+      const body =
+        `שם: ${name}\n` +
+        `טלפון: ${phone}\n` +
+        `שירות מבוקש: ${service}\n` +
+        (msg ? `פרטים: ${msg}\n` : '') +
+        `\nנשלח מדף האתר של B&K אחזקות`;
+
+      window.location.href = `mailto:${email}?subject=${subject}&body=${encodeURIComponent(body)}`;
     }
   </script>
 </body>
