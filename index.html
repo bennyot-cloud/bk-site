@@ -1,109 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>B&K אחזקות - הנדימן ושירותי תחזוקה</title>
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f5f5f5;
-  color: #222;
-  line-height: 1.6;
-}
-header {
-  background: white;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid #eee;
-}
-header img {
-  max-width: 160px;
-}
-.section {
-  padding: 40px 18px;
-  text-align: center;
-}
-h1, h2 {
-  margin-bottom: 18px;
-}
-img.car {
-  width: 100%;
-  max-width: 800px;
-  border-radius: 14px;
-  margin-top: 25px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.15);
-}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>B&K אחזקות – כל פתרונות הבית במקום אחד</title>
+  <meta name="description" content="B&K אחזקות – הנדימן ושירותי תחזוקה לבית ולעסק: חשמל קל, אינסטלציה, צבע, התקנות ותחזוקה. שירות אמין, הגעה מהירה ואחריות.">
+  <link rel="icon" type="image/png" href="favicon.png">
 
-/* גריד המלצות */
-.reviews {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 18px;
-  margin-top: 30px;
-}
-.review-box {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  font-size: 15px;
-  text-align: right;
-}
-
-/* כפתור וואטסאפ */
-.whatsapp {
-  background: #25D366;
-  color: white;
-  padding: 14px 24px;
-  border-radius: 50px;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  margin-top: 30px;
-}
-</style>
+  <!-- Font + Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand:'#1E3A8A', accent:'#F97316', bg:'#FAF7F2' }
+        }
+      }
+    }
+  </script>
+  <style> body{font-family:"Assistant",sans-serif;} </style>
 </head>
 
-<body>
-
-<header>
-  <img src="logo.png" alt="לוגו B&K אחזקות">
-</header>
-
-<section class="section">
-  <h1>B&K אחזקות</h1>
-  <h2>כל פתרונות הבית במקום אחד</h2>
-  <p>תיקונים, התקנות, אינסטלציה, חשמל, גבס, צבע ועוד — שירות מקצועי, מהיר ואמין.</p>
-
-  <!-- תמונת הרכב -->
-  <img src="car.png" class="car" alt="רכב שירות B&K אחזקות">
-</section>
-
-<section class="section" style="background:#fff;">
-  <h2>לקוחות מספרים עלינו</h2>
-  <div class="reviews">
-
-    <div class="review-box">הגיעו בזמן, עשו עבודה נקייה ומקצועית. ממליץ בחום!</div>
-    <div class="review-box">תיקנו אצלי בעיית חשמל מסובכת תוך שעה. פשוט תותחים.</div>
-    <div class="review-box">שירות מהיר ואדיב, והמחיר היה הוגן לגמרי.</div>
-
-    <div class="review-box">התקינו לנו מדף וטלוויזיה בצורה מושלמת. תודה רבה!</div>
-    <div class="review-box">אחרי שניסו 3 בעלי מקצוע אחרים - סוף סוף פתרו לנו את הנזילה.</div>
-    <div class="review-box">מקצוענים. הכל בוצע בדיוק כמו שביקשנו וללא הפתעות.</div>
-
+<body class="bg-bg text-gray-900">
+  <!-- Top bar -->
+  <div class="w-full bg-white/90 backdrop-blur border-b sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="logo.png" alt="B&K אחזקות" class="h-12">
+        <div>
+          <div class="text-xl font-bold text-brand">B&K אחזקות</div>
+          <div class="text-sm text-gray-600">כל פתרונות הבית במקום אחד</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 text-sm">
+        <span class="hidden sm:inline text-gray-600">התקשרו עכשיו</span>
+        <a id="phoneLink" href="tel:+972500000000" class="underline underline-offset-4">050-0000000</a>
+        <a id="waTop" href="https://wa.me/972500000000" class="ml-2 px-3 py-2 rounded-2xl bg-accent text-white hover:opacity-90 transition">וואטסאפ</a>
+      </div>
+    </div>
   </div>
-</section>
 
-<section class="section">
-  <h2>רוצה הצעת מחיר?</h2>
-  <p>דברו איתנו בוואטסאפ ונחזור אליכם מיד.</p>
+  <!-- Hero -->
+  <header class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581093458791-9d09f62b7c1b?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-12 lg:py-16">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-brand">שירותי הנדימן ותחזוקה מקצועיים לבית ולעסק</h1>
+      <p class="mt-3 text-lg text-gray-700 max-w-2xl">
+        התקנות, צבע, אינסטלציה, חשמל קל ותחזוקה שוטפת – מגיעים בזמן, עובדים נקי, נותנים אחריות.
+      </p>
+      <div class="mt-5 flex flex-wrap gap-3">
+        <a href="#contact" class="px-5 py-3 rounded-2xl bg-accent text-white text-base hover:opacity-90 transition">קבלו הצעת מחיר</a>
+        <a href="#services" class="px-5 py-3 rounded-2xl border border-brand/40 text-brand hover:bg-white transition">לראות שירותים</a>
+      </div>
+      <div class="mt-4 flex flex-wrap gap-6 text-sm text-gray-700">
+        <span>הגעה מהירה</span><span>אחריות מלאה</span><span>מחירים הוגנים</span>
+      </div>
+    </div>
+  </header>
 
-  <a class="whatsapp" href="https://wa.me/97250XXXXXXXX" target="_blank">
-    לחץ כאן לשליחת וואטסאפ
+  <!-- Why us + small car (side) -->
+  <section class="max-w-6xl mx-auto px-4 py-10">
+    <div class="grid md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-2">
+        <h2 class="text-3xl md:text-4xl font-bold mb-3 text-brand">למה לבחור ב־B&K אחזקות</h2>
+        <p class="text-gray-700 leading-7">
+          הקמנו את B&K אחזקות כדי לעשות סדר בעולם התחזוקה: זמן תגובה קצר, עבודה נקייה, תקשורת ברורה ואחריות על כל משימה. אנחנו מאמינים בשירות אישי, שקיפות מלאה ותמחור הוגן.
+        </p>
+        <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-700">
+          <li>✔ הגעה מהירה ותיאום שקוף</li>
+          <li>✔ אחריות על העבודה</li>
+          <li>✔ חשמל קל, אינסטלציה, צבע והתקנות</li>
+          <li>✔ עמידה בלוחות זמנים</li>
+        </ul>
+      </div>
+      <!-- car image small & subtle -->
+      <div class="flex justify-center md:justify-end">
+        <img src="car.png" alt="רכב שירות B&K אחזקות" class="w-56 rounded-xl shadow-md border border-gray-200">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="max-w-6xl mx-auto px-4 py-10 bg-white rounded-2xl shadow-sm border">
+    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-brand">שירותים מובילים</h3>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="rounded-2xl bg-white border shadow-sm">
+        <div class="p-4 border-b text-xl font-semibold text-brand">עבודות כלליות</div>
+        <ul class="p-4 list-disc pr-5 text-gray-700 space-y-1">
+          <li>הרכבת רהיטים</li><li>תליית טלוויזיות, מדפים ומראות</li><li>ידיות וצירים</li><li>מתלים ווילונות</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl bg-white border shadow-sm">
+        <div class="p-4 border-b text-xl font-semibold text-brand">חשמל ותאורה</div>
+        <ul class="p-4 list-disc pr-5 text-gray-700 space-y-1">
+          <li>התקנת גופי תאורה</li><li>מפסקים ושקעים</li><li>איתור תקלות בסיסיות</li><li>הרחבת נקודות</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl bg-white border shadow-sm">
+        <div class="p-4 border-b text-xl font-semibold text-brand">אינסטלציה קלה</div>
+        <ul class="p-4 list-disc pr-5 text-gray-700 space-y-1">
+          <li>החלפת ברזים וניאגרות</li><li>פתיחת סתימות פשוטות</li><li>תיקוני נזילות</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials (6 cards, emphasized) -->
+  <section id="testimonials" class="bg-bg py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-2xl md:text-3xl font-bold mb-6 text-brand">מה הלקוחות מספרים עלינו</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl bg-white border shadow-sm p-6">
+          <div class="text-gray-700">“הגיעו בזמן ועבדו נקי ומסודר. מחיר הוגן ואחריות. מומלץ בחום!”</div>
+          <div class="mt-3 font-semibold text-brand">– עדי מ., תל אביב</div>
+        </div>
+        <div class="rounded-2xl bg-white border shadow-sm p-6">
+          <div class="text-gray-700">“מקצוענים. פתרו תקלה חשמלית תוך שעה. שירות מעולה.”</div>
+          <div class="mt-3 font-semibold text-brand">– ליאת ו., פתח תקווה</div>
+        </div>
+        <div class="rounded-2xl bg-white border shadow-sm p-6">
+          <div class="text-gray-700">“תליית טלוויזיה ומדפים בדיוק ובקפדנות. אחלה צוות.”</div>
+          <div class="mt-3 font-semibold text-brand">– רון ש., ראשון לציון</div>
+        </div>
+        <div class="rounded-2xl bg-white border shadow-sm p-6">
+          <div class="text-gray-700">“אחרי שני בעלי מקצוע – רק הם פתרו את הנזילה. תודה!”</div>
+          <div class="mt-3 font-semibold text-brand">– מורן ק., גבעתיים</div>
+        </div>
+        <div class="rounded-2xl bg-white border shadow-sm p-6">
+          <div class="text-gray-700">“מענה מהיר, תיאום נוח והכל לפי הזמן שנקבע. חוויית שירות.”</div>
+          <div class="mt-3 font-semibold text-brand">– גיל ש., רמת גן</div>
+        </div>
+        <div class="rounded-2xl bg-white border shadow-sm p-6">
+          <div class="text-gray-700">“צביעה ותיקונים קלים בדירה להשכרה – בוצע מושלם ובזמן.”</div>
+          <div class="mt-3 font-semibold text-brand">– רועי פ., חולון</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-white py-12 border-t">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-2xl md:text-3xl font-bold mb-6">דברו איתנו</h3>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="rounded-2xl bg-white border shadow-sm p-6">
+          <form onsubmit="handleSubmit(event)" class="grid gap-3">
+            <input type="text" id="name" placeholder="שם מלא" class="border rounded-xl px-3 py-2">
+            <input type="tel" id="phone" placeholder="טלפון" class="border rounded-xl px-3 py-2">
+            <input type="text" id="service" placeholder="סוג שירות" class="border rounded-xl px-3 py-2">
+            <textarea id="msg" rows="4" placeholder="פרטים נוספים" class="border rounded-xl px-3 py-2"></textarea>
+            <button type="submit" class="px-4 py-2 rounded-2xl bg-accent text-white hover:opacity-90 transition">שליחה</button>
+          </form>
+        </div>
+        <div>
+          <p class="text-gray-700 mb-3">
+            📞 <a id="phoneText" href="tel:+972500000000" class="underline">050-0000000</a><br>
+            אזור הפעילות: מרכז והסביבה<br>
+            שעות: א׳–ו׳ 08:00–19:00
+          </p>
+          <a id="waBlock" href="https://wa.me/972500000000" class="px-4 py-2 rounded-2xl bg-green-500 text-white hover:bg-green-600 transition inline-block">שלחו הודעה בוואטסאפ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-8 grid md:grid-cols-2 gap-6 items-center">
+      <div>
+        <div class="text-xl font-bold text-brand">B&K אחזקות</div>
+        <div class="text-sm text-gray-700">כל פתרונות הבית במקום אחד. שירות אישי, עבודה נקייה ואחריות מלאה.</div>
+      </div>
+      <div class="text-sm text-gray-600 md:text-left">
+        © <span id="year"></span> B&K אחזקות. כל הזכויות שמורות.
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp floating -->
+  <a id="waFloat" href="https://wa.me/972500000000"
+     class="fixed bottom-5 left-5 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50"
+     target="_blank" aria-label="WhatsApp">
+    <!-- icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 .02C5.384.02 0 5.403 0 12.02c0 2.115.55 4.168 1.595 5.987L.043 24l6.195-1.62A11.99 11.99 0 0 0 12 24c6.616 0 12-5.383 12-12S18.616.02 12 .02z"/>
+    </svg>
   </a>
-</section>
 
+  <script>
+    // שנה כאן למספר האמיתי כשתהיה מוכן (בפורמט בינלאומי בלי 0)
+    const phoneIntl = '972500000000'; // לדוגמה: 97252XXXXXXX
+    const phoneHuman = '050-0000000';
+
+    // עדכון קישורי טלפון/וואטסאפ
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('waTop').href   = `https://wa.me/${phoneIntl}`;
+    document.getElementById('waBlock').href = `https://wa.me/${phoneIntl}`;
+    document.getElementById('waFloat').href = `https://wa.me/${phoneIntl}`;
+    document.getElementById('phoneLink').href = `tel:+${phoneIntl}`;
+    document.getElementById('phoneText').href = `tel:+${phoneIntl}`;
+    document.getElementById('phoneText').textContent = phoneHuman;
+
+    // שליחת טופס לוואטסאפ
+    function handleSubmit(e){
+      e.preventDefault();
+      const name=document.getElementById('name').value||'';
+      const phone=document.getElementById('phone').value||'';
+      const service=document.getElementById('service').value||'';
+      const msg=document.getElementById('msg').value||'';
+      const text=`👋 שלום, אני ${name}%0Aטלפון: ${phone}%0Aשירות: ${service}%0Aפרטים: ${msg}`;
+      window.open(`https://wa.me/${phoneIntl}?text=${text}`,'_blank');
+    }
+  </script>
 </body>
 </html>
